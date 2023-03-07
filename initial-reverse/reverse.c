@@ -85,6 +85,10 @@ int main(int argc, char* argv[]) {
 	for (int i = true_len - 1; i >= 0; i--) {
 		fputs(file[i], fq);
 	}
+	for (int i = 0; i < true_len; i++) {
+		free(file[i]);
+	}
+	free(file);
 	fclose(fp);
 	fclose(fq);
 	return 0;
